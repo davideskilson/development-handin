@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development Handin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400&display=swap"
+    />
+  </head>
+  <body>
+    <div id="title">
+      <h1>Development Handin</h1>
+    </div>
+    <div id="portfolio-readiness">
+      <div>
+        <h2>Introduction</h2>
+        <p>
+          In this project, my fourth assignment in CSCI 1300: User Interfaces
+          and User Experiences, I had the chance to go through the actual
+          development process of building a web app. I built a website from
+          scratch using React that involves filtering, sorting, and aggregating
+          functionality, and I ultimately deployed that site using Vercel.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="part1">
+      <div>
+        <h2>Part 1: Competitive Analysis</h2>
+        <p>
+          In this initial phase of the project, I had the chance to conduct my
+          own competitive analysis of websites with a favoriting function and
+          consider the various features related to sorting and filtering within
+          the favoring aggregation feature. I then reflected on the analysis and
+          ultimately used it for inspiration for what features I would like to
+          include on the site I eventually built.
+        </p>
+        <div>
+          <p>
+            Here is a competitive comparison chart for my three chosen websites:
+          </p>
+          <table>
+            <tr>
+              <th></th>
+              <th><a href="https://gmail.google.com">Gmail</a></th>
+              <th><a href="https://github.com">GitHub</a></th>
+              <th><a href="https://photos.google.com/">Google Photos</a></th>
+            </tr>
+            <tr>
+              <td>
+                Allows for display of aggregated favorites in chronological
+                order
+              </td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td>Allows user to search within the aggregation of favorites</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#10060;</td>
+            </tr>
+            <tr>
+              <td>
+                Allows filtering aggregated favorites by some sort of date (e.g.
+                creation or last modified)
+              </td>
+              <td>&#9989; (filtering from when the starred email was sent)</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+            </tr>
+            <tr>
+              <td>
+                Allows sorting aggregated favorites by some an additional type
+                of date (e.g. last modified or last viewed)
+              </td>
+              <td>&#10060;</td>
+              <td>&#9989; (sorting by recently starred and recently added)</td>
+              <td>&#10060;</td>
+            </tr>
+            <tr>
+              <td>
+                Allows filtering aggregated favorites by one or more properties
+                of the items
+              </td>
+              <td>&#9989; (numerous, including sender/receiver)</td>
+              <td>&#9989; (by programming language and public/private)</td>
+              <td>&#10060;</td>
+            </tr>
+            <tr>
+              <td>
+                Allows sorting aggregated favorites by a property of the items
+              </td>
+              <td>&#10060;</td>
+              <td>&#9135; (only one, by number of stars)</td>
+              <td>&#10060;</td>
+            </tr>
+            <tr>
+              <td>
+                Allows easy removal of favorited items from the aggregator
+              </td>
+              <td>&#9989; (one click)</td>
+              <td>&#9989; (one click)</td>
+              <td>&#9135; (multiple clicks, including a menu)</td>
+            </tr>
+          </table>
+          <p>
+            Overall, I found that it was most effective when the websites had
+            more options for filtering and sorting and when those features
+            worked well in combination. In the next few paragraphs, seperated by
+            website for readability, I analyze each of the websites in the
+            context of design principles from class and my competitive analysis
+            chart.
+          </p>
+          <p>
+            Referencing Gmail, the text search feature was especially useful
+            considering the vast amount of favorite emails that one can
+            accumulate over time. Additionally, the interface dropdowns for
+            filtering options were quite useful in considering the options and
+            using different filters. Also, it was quite useful that the default
+            arrangement of favorites in chronology mirrored the default
+            arrangement and look of general emails in the main inbox, allowing
+            the transfer of a mental model.
+          </p>
+          <p>
+            For GitHub, the filtering was also very well done, with clear
+            catagories in a dropdown. I will note, however, that the arrangement
+            of repositories did not include information about public vs. private
+            by default in the aggregator, requiring extra clicks for a user to
+            have to navigate to see that informationl.
+          </p>
+          <p>
+            Google photos had the weakest favoriting feature since it lacked any
+            filtering or sorting through the photos, and there was no way to
+            search photos for objects or location or anything like that.
+            Additionally, from the perspective of class design principles, it
+            was not immediately clear how to unfavorite an image from the
+            general aggregated favorite menu; I had to experiment a bit and
+            explore by clicking around in the image, which was poor design due
+            to poor learnability.
+          </p>
+          <p>
+            Based on my competitive analysis chart and summary paragraphs, here
+            is a list of features that I would like to implement in my own web
+            app:
+          </p>
+          <ul>
+            <li>
+              Multiple filtering catagories that can work simultaneously - this
+              can be implemented using React to check the properties of items
+            </li>
+            <li>
+              One (or more if time) option(s) for sorting - this can be
+              implemented using React to sort the items by a property
+            </li>
+            <li>
+              Filtering and sorting that work at the same time - this can be
+              implemented by ensuring no conflicts occur in my React
+              implementation of the respective parts of the assignment
+            </li>
+            <li>
+              One click removal of items from my aggregator - this can be
+              accomplished by including a place to click in the aggregator by
+              each element that allows for its removal (note: will instead have
+              the removal button be with the item card if time constrains come
+              up)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="part2">
+      <div>
+        <h2>Part 2: Set Up</h2>
+        <p>
+          In this section of the project, I set up a GitHub repo that included a
+          README and used the create-react-app command to allow me to build my
+          app from scrath.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="part3">
+      <div>
+        <h2>Part 3: Functionality</h2>
+        <p>
+          In this part of the project, I chose a theme for my app and coded it
+          using React.
+        </p>
+        <p>
+          My theme is a book based app, which will allow users to choose their
+          favorites from a list of books. Additionally, users can also utilize
+          the list of books to look for books that are of potential interest to
+          them. In order to ease their searching process for books in the list,
+          the web app will allow filtering by author name and book genre, and it
+          will allow sorting by book length in terms of word count. Users will
+          therefore be able to choose their favorite books, and then filter
+          remaining books in the list perhaps using a feature about a book that
+          they chose to favorite, and then can sort the books by page number if
+          they desire books of a certain length.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="part4">
+      <div>
+        <h2>Part 4: Deployment</h2>
+        <p>
+          In this portion of the project, I deployed the app that I built using
+          Vercel.
+        </p>
+        <div>
+          <p>
+            Link to my deployed site:
+            <a href="https://development-black.vercel.app">Here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="part5">
+      <div>
+        <h2>Part 5: README</h2>
+        <p>
+          In this final division of the project, I wrote up a README in the root
+          directory of my react app repository. This README included a link to
+          my deployed app, instructions for how to locally run my web app, and a
+          list of known bugs (of which there are currently none).
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div id="portfolio-readiness">
+      <div>
+        <h2>Conclusion and Reflections</h2>
+        <p>
+          Over the course of this project, I was able to both get experience in
+          design by critically analyzing features of another web app as well as
+          go through the full development process including coding and
+          deploying. This coding experiene included the implemetnation of a
+          favoriting feature as well as sorting and filtering, all critical
+          frameworks for many websites. I feel as though I have had the chance
+          to learn a lot about design and development from completing this
+          project, and I look forward to continuing to advance my design and
+          front end engineering skills in future endevours.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

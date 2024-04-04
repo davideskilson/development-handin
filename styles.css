@@ -1,0 +1,77 @@
+h1 {
+  color: lightcoral;
+  text-align: center;
+  font-family: "Poppins";
+}
+
+h2 {
+  font-family: "Poppins";
+  color: palevioletred;
+}
+
+h3 {
+  font-family: "Poppins";
+  color: darkcyan;
+}
+
+h4 {
+  font-family: "Poppins";
+  color: rgb(109, 59, 94);
+}
+
+html {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+
+p,
+ul {
+  font-family: "Lato";
+  color: darkolivegreen;
+}
+
+img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+hr {
+  color: turquoise;
+}
+
+.galleryImage {
+  width: 100%;
+  height: auto;
+  height: 300px;
+}
+
+img {
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+td {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 2px solid rgb(15, 150, 228);
+  border-collapse: collapse;
+  color: darkolivegreen;
+  padding: 15px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
