@@ -48,9 +48,17 @@
           <table>
             <tr>
               <th></th>
-              <th><a href="https://gmail.google.com">Gmail</a></th>
-              <th><a href="https://github.com">GitHub</a></th>
-              <th><a href="https://photos.google.com/">Google Photos</a></th>
+              <th>
+                <a href="https://mail.google.com/mail/u/0/#starred">Gmail</a>
+              </th>
+              <th>
+                <a href="https://github.com/">GitHub</a>
+              </th>
+              <th>
+                <a href="https://photos.google.com/search/_m8_Favorites"
+                  >Google Photos</a
+                >
+              </th>
             </tr>
             <tr>
               <td>
@@ -96,15 +104,15 @@
             </tr>
             <tr>
               <td>
-                Allows sorting aggregated favorites by a property of the items
+                Allows sorting aggregated favorites by properties of the items
               </td>
               <td>&#10060;</td>
-              <td>&#9135; (only one, by number of stars)</td>
+              <td>&#9135; (only one, by total number of stars)</td>
               <td>&#10060;</td>
             </tr>
             <tr>
               <td>
-                Allows easy removal of favorited items from the aggregator
+                Allows smooth removal of favorited items from the aggregator
               </td>
               <td>&#9989; (one click)</td>
               <td>&#9989; (one click)</td>
@@ -127,24 +135,32 @@
             using different filters. Also, it was quite useful that the default
             arrangement of favorites in chronology mirrored the default
             arrangement and look of general emails in the main inbox, allowing
-            the transfer of a mental model.
+            the transfer of a mental model. Thus, Gmail had a very successful
+            aggregation interface with its extensive filtering catagories that
+            were easy to select and very thorough.
           </p>
           <p>
             For GitHub, the filtering was also very well done, with clear
             catagories in a dropdown. I will note, however, that the arrangement
             of repositories did not include information about public vs. private
             by default in the aggregator, requiring extra clicks for a user to
-            have to navigate to see that informationl.
+            have to navigate to see that information. All in all, however,
+            GitHub had a successful aggregating interface due to the easy to use
+            dropdowns as well as the ability to also sort the aggregated
+            repositories using different options.
           </p>
           <p>
-            Google photos had the weakest favoriting feature since it lacked any
+            Google Photos had the weakest favoriting feature since it lacked any
             filtering or sorting through the photos, and there was no way to
             search photos for objects or location or anything like that.
             Additionally, from the perspective of class design principles, it
             was not immediately clear how to unfavorite an image from the
             general aggregated favorite menu; I had to experiment a bit and
-            explore by clicking around in the image, which was poor design due
-            to poor learnability.
+            explore by clicking around in the image, meaning that the feature
+            had poor learnability. With all of that in mind, Google Photos had
+            an unsuccessful favoriting interface that essentially just displayed
+            the favorites without giving the user the ability to sort or filter
+            their favorites to look for a specific image.
           </p>
           <p>
             Based on my competitive analysis chart and summary paragraphs, here
@@ -153,12 +169,14 @@
           </p>
           <ul>
             <li>
-              Multiple filtering catagories that can work simultaneously - this
-              can be implemented using React to check the properties of items
+              Multiple filtering catagories that can work simultaneously,
+              created using dropdowns - this can be implemented using React to
+              check the properties of items
             </li>
             <li>
-              One (or more if time) option(s) for sorting - this can be
-              implemented using React to sort the items by a property
+              One (or more if time) option(s) for sorting created using
+              dropdowns - this can be implemented using React to sort the items
+              by a property as their component is being created
             </li>
             <li>
               Filtering and sorting that work at the same time - this can be
@@ -193,7 +211,9 @@
         <h2>Part 3: Functionality</h2>
         <p>
           In this part of the project, I chose a theme for my app and coded it
-          using React.
+          using React. This app includes aggregation, filtering, and sorting,
+          and it also follows design principles from class and is accessible
+          (checked with WebAIM).
         </p>
         <p>
           My theme is a book based app, which will allow users to choose their
@@ -202,10 +222,10 @@
           them. In order to ease their searching process for books in the list,
           the web app will allow filtering by author name and book genre, and it
           will allow sorting by book length in terms of word count. Users will
-          therefore be able to choose their favorite books, and then filter
-          remaining books in the list perhaps using a feature about a book that
-          they chose to favorite, and then can sort the books by page number if
-          they desire books of a certain length.
+          therefore be able to aggregate their favorite books, and then filter
+          the books in the list perhaps using a feature about a book that they
+          chose to favorite, and then can sort the books by word count if they
+          desire books of a certain length.
         </p>
       </div>
     </div>
